@@ -54,7 +54,7 @@
                                 <color key="textColor" red="0.21707296370000001" green="0.4201650321" blue="0.5193710923" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="     History Event 4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nte-Ng-n4Q">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="     History Event 4 " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nte-Ng-n4Q">
                                 <rect key="frame" x="16" y="402" width="303" height="116"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -67,26 +67,56 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4q-hp-91s">
                                 <rect key="frame" x="319" y="30" width="40" height="116"/>
                                 <state key="normal" image="FullButtonDown"/>
+                                <state key="highlighted" image="FullButtonDownSelected"/>
+                                <connections>
+                                    <action selector="moveButtonPressedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Pyu-mu-eDG"/>
+                                    <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S2c-Uu-2Y0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0j-vE-wdN">
                                 <rect key="frame" x="319" y="402" width="40" height="116"/>
                                 <state key="normal" image="FullButtonUp"/>
+                                <state key="highlighted" image="FullButtonUpSelected"/>
+                                <connections>
+                                    <action selector="moveButtonPressedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="qLi-5o-hN5"/>
+                                    <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IJ9-yp-Jvh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G67-9q-da5">
                                 <rect key="frame" x="319" y="154" width="40" height="58"/>
                                 <state key="normal" image="HalfButtonUp"/>
+                                <state key="highlighted" image="HalfButtonUpSelected"/>
+                                <connections>
+                                    <action selector="moveButtonPressedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="67l-x7-19e"/>
+                                    <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jha-Mj-phC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGH-9y-VKS">
                                 <rect key="frame" x="319" y="278" width="40" height="58"/>
                                 <state key="normal" image="HalfButtonUp"/>
+                                <state key="highlighted" image="HalfButtonUpSelected"/>
+                                <connections>
+                                    <action selector="moveButtonPressedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="UA9-Qw-VFu"/>
+                                    <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BWN-Yk-iLD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwG-9I-Dvu">
                                 <rect key="frame" x="319" y="212" width="40" height="58"/>
                                 <state key="normal" image="HalfButtonDown"/>
+                                <state key="highlighted" image="HalfButtonDownSelected"/>
+                                <connections>
+                                    <action selector="moveButtonPressedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="mxH-Re-ZnE"/>
+                                    <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ktt-RV-BiY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeZ-7j-swY">
                                 <rect key="frame" x="319" y="336" width="40" height="58"/>
                                 <state key="normal" image="HalfButtonDown"/>
+                                <state key="highlighted" image="HalfButtonDownSelected"/>
+                                <connections>
+                                    <action selector="moveButtonPressedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="LVB-m8-c2g"/>
+                                    <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dy9-UA-cEZ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="9d5-Ef-jAJ">
                                 <rect key="frame" x="124" y="527.5" width="127" height="60"/>
@@ -158,8 +188,12 @@
     </scenes>
     <resources>
         <image name="FullButtonDown" width="158" height="457"/>
+        <image name="FullButtonDownSelected" width="158" height="457"/>
         <image name="FullButtonUp" width="158" height="457"/>
+        <image name="FullButtonUpSelected" width="158" height="457"/>
         <image name="HalfButtonDown" width="158" height="229"/>
+        <image name="HalfButtonDownSelected" width="158" height="229"/>
         <image name="HalfButtonUp" width="158" height="229"/>
+        <image name="HalfButtonUpSelected" width="158" height="229"/>
     </resources>
 </document>
