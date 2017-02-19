@@ -113,18 +113,31 @@ class ViewController: UIViewController
 
     }
 
+    override func viewDidAppear(_ animated: Bool)
+    {
+        
+        seconds = 60
+        TimerLabel.text = "1:00"
+        
+        movieSequenceGame.resetGame()
+        movieArray = movieSequenceGame.selectMovies()
+        
+        disableNextRoundButton()
+        enableMoveButtons()
+        startTimer()
+        
+        FirstLabel.text = movieArray[0].movieTitle
+        SecondLabel.text = movieArray[1].movieTitle
+        ThirdLabel.text = movieArray[2].movieTitle
+        FourthLabel.text = movieArray[3].movieTitle
+    }
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         self.becomeFirstResponder()
         // Do any additional setup after loading the view, typically from a nib.
-        FirstLabel.text = movieArray[0].movieTitle
-        SecondLabel.text = movieArray[1].movieTitle
-        ThirdLabel.text = movieArray[2].movieTitle
-        FourthLabel.text = movieArray[3].movieTitle
-        
-        disableNextRoundButton()
-        startTimer()
+
         
     }
 
@@ -201,7 +214,10 @@ class ViewController: UIViewController
         {
             disableNextRoundButton()
             disableMoveButtons()
-            informationLabel.text = "Game is finished"
+            gameResult = movieSequenceGame.getScore()
+            finishGameScreen()
+            
+
         }
     }
     
@@ -272,6 +288,17 @@ class ViewController: UIViewController
         MoveButton4.isUserInteractionEnabled = true
         MoveButton5.isUserInteractionEnabled = true
         MoveButton6.isUserInteractionEnabled = true
+        
+    }
+    
+    func finishGameScreen()
+    {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        let objSomeViewController = storyBoard.instantiateViewController(withIdentifier: "EndOfGameController")
+        
+        // If you want to present the new ViewController then use this
+        self.present(objSomeViewController, animated:true, completion:nil)
         
     }
 

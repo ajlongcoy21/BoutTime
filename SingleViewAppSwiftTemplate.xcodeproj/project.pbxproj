@@ -17,6 +17,7 @@
 		3E304CCB1E514BED008E8578 /* MovieDebuts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E304CCA1E514BED008E8578 /* MovieDebuts.plist */; };
 		3E4ADC1F1E58FB1100F86E8D /* MovieSequenceGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4ADC1E1E58FB1100F86E8D /* MovieSequenceGame.swift */; };
 		3E4ADC231E59347300F86E8D /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4ADC221E59347300F86E8D /* Game.swift */; };
+		3E4ADC251E59F39100F86E8D /* EndOfGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4ADC241E59F39100F86E8D /* EndOfGameController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		3E304CCA1E514BED008E8578 /* MovieDebuts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = MovieDebuts.plist; path = ../MovieDebuts.plist; sourceTree = "<group>"; };
 		3E4ADC1E1E58FB1100F86E8D /* MovieSequenceGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieSequenceGame.swift; sourceTree = "<group>"; };
 		3E4ADC221E59347300F86E8D /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		3E4ADC241E59F39100F86E8D /* EndOfGameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndOfGameController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				3A8AADD41DF9B85E00A2B931 /* Info.plist */,
 				3E4ADC1E1E58FB1100F86E8D /* MovieSequenceGame.swift */,
 				3E4ADC221E59347300F86E8D /* Game.swift */,
+				3E4ADC241E59F39100F86E8D /* EndOfGameController.swift */,
 			);
 			path = SingleViewAppSwiftTemplate;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				3A8AADCB1DF9B85E00A2B931 /* ViewController.swift in Sources */,
 				3E4ADC1F1E58FB1100F86E8D /* MovieSequenceGame.swift in Sources */,
 				3A8AADC91DF9B85E00A2B931 /* AppDelegate.swift in Sources */,
+				3E4ADC251E59F39100F86E8D /* EndOfGameController.swift in Sources */,
 				3E4ADC231E59347300F86E8D /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

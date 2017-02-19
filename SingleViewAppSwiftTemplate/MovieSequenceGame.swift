@@ -122,14 +122,6 @@ class MovieSequenceGame: Game
         }
     }
     
-    func resetMovieSelections()
-    {
-        for index in 0...3
-        {
-            moviesSelectedArray[index] = -1
-        }
-    }
-    
     func checkAnswer(submittal: [Movie]) -> Bool
     {
         
@@ -161,9 +153,14 @@ class MovieSequenceGame: Game
         return gameRound
     }
     
+    func getScore() -> Int
+    {
+        return playerScore
+    }
+    
     func isGameFinished() -> Bool
     {
-        if gameRound == 6
+        if gameRound == 5
         {
             return true
         }
@@ -171,6 +168,15 @@ class MovieSequenceGame: Game
         {
             return false
         }
+    }
+    
+    func resetGame()
+    {
+        self.gameRound = 0
+        self.playerScore = 0
+        self.moviesSelected = false
+        
+        resetMovieSelectedArray()
     }
     
 }

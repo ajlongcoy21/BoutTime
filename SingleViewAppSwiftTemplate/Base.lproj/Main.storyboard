@@ -238,7 +238,65 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-146.40000000000001" y="121.88905547226388"/>
+            <point key="canvasLocation" x="-940" y="122"/>
+        </scene>
+        <!--EndOfGame-->
+        <scene sceneID="3yw-E9-9ij">
+            <objects>
+                <viewController storyboardIdentifier="EndOfGameController" title="EndOfGame" id="NmN-oz-oVL" customClass="EndOfGameController" customModule="SingleViewAppSwiftTemplate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1gw-h6-V4p"/>
+                        <viewControllerLayoutGuide type="bottom" id="wd3-qF-vRe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hi2-gs-isZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="hMc-zS-hUu">
+                                <rect key="frame" x="62" y="145" width="251" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" red="0.131812185" green="0.43612533809999998" blue="0.57611638310000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6/6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYB-ey-bzY">
+                                <rect key="frame" x="124" y="186" width="127" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UYB-ey-bzY" secondAttribute="height" multiplier="127:60" id="I0r-9Q-lNu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zwp-7w-SKo">
+                                <rect key="frame" x="102" y="254" width="171" height="60"/>
+                                <state key="normal" image="PlayAgain"/>
+                                <connections>
+                                    <action selector="dismiss:" destination="NmN-oz-oVL" eventType="touchUpInside" id="DLC-DF-wtN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.028305646032094955" green="0.16175925731658936" blue="0.29185521602630615" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="UYB-ey-bzY" secondAttribute="trailing" constant="108" id="0Vg-AM-n1z"/>
+                            <constraint firstItem="hMc-zS-hUu" firstAttribute="leading" secondItem="hi2-gs-isZ" secondAttribute="leadingMargin" constant="46" id="1se-ds-OOd"/>
+                            <constraint firstItem="UYB-ey-bzY" firstAttribute="width" secondItem="UYB-ey-bzY" secondAttribute="height" multiplier="127:60" id="68p-c5-CU6"/>
+                            <constraint firstItem="Zwp-7w-SKo" firstAttribute="height" secondItem="UYB-ey-bzY" secondAttribute="height" id="7oR-O4-uwy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hMc-zS-hUu" secondAttribute="trailing" constant="46" id="E8B-5S-7bf"/>
+                            <constraint firstItem="Zwp-7w-SKo" firstAttribute="leading" secondItem="hi2-gs-isZ" secondAttribute="leadingMargin" constant="86" id="RR6-W6-Uz2"/>
+                            <constraint firstItem="UYB-ey-bzY" firstAttribute="leading" secondItem="hi2-gs-isZ" secondAttribute="leadingMargin" constant="108" id="XH1-d1-eUm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zwp-7w-SKo" secondAttribute="trailing" constant="86" id="XxK-4S-2Ce"/>
+                            <constraint firstItem="Zwp-7w-SKo" firstAttribute="top" secondItem="UYB-ey-bzY" secondAttribute="bottom" constant="8" id="hJq-q2-WPd"/>
+                            <constraint firstItem="hMc-zS-hUu" firstAttribute="top" secondItem="1gw-h6-V4p" secondAttribute="bottom" constant="125" id="rqm-kb-5UW"/>
+                            <constraint firstItem="UYB-ey-bzY" firstAttribute="top" secondItem="hMc-zS-hUu" secondAttribute="bottom" constant="8" id="vJ5-DF-TAH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ScoreLabel" destination="UYB-ey-bzY" id="Now-9O-nSm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ENM-UW-3G9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-240.80000000000001" y="124.58770614692655"/>
         </scene>
     </scenes>
     <resources>
@@ -250,5 +308,6 @@
         <image name="HalfButtonDownSelected" width="158" height="229"/>
         <image name="HalfButtonUp" width="158" height="229"/>
         <image name="HalfButtonUpSelected" width="158" height="229"/>
+        <image name="PlayAgain" width="450" height="142"/>
     </resources>
 </document>
