@@ -163,8 +163,11 @@
                                 <color key="textColor" red="0.13181218504905701" green="0.43612533807754517" blue="0.57611638307571411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2M-ap-iqD">
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2M-ap-iqD">
                                 <rect key="frame" x="78" y="527" width="219" height="68"/>
+                                <connections>
+                                    <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sba-q5-fnI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.028375577181577682" green="0.1618008017539978" blue="0.29589968919754028" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -220,6 +223,12 @@
                     <connections>
                         <outlet property="FirstLabel" destination="9ec-QM-g97" id="y5i-r6-xvZ"/>
                         <outlet property="FourthLabel" destination="nte-Ng-n4Q" id="ffv-6m-4EG"/>
+                        <outlet property="MoveButton1" destination="q4q-hp-91s" id="5ky-g6-RUY"/>
+                        <outlet property="MoveButton2" destination="G67-9q-da5" id="XLQ-wp-J6t"/>
+                        <outlet property="MoveButton3" destination="RwG-9I-Dvu" id="5gT-c6-y1E"/>
+                        <outlet property="MoveButton4" destination="GGH-9y-VKS" id="g8r-Sl-Hr2"/>
+                        <outlet property="MoveButton5" destination="SeZ-7j-swY" id="mbA-bf-obl"/>
+                        <outlet property="MoveButton6" destination="c0j-vE-wdN" id="MGO-Mc-hNF"/>
                         <outlet property="NextRoundButton" destination="V2M-ap-iqD" id="Gvp-KU-glz"/>
                         <outlet property="SecondLabel" destination="rgI-mB-xbq" id="IFv-YE-oOZ"/>
                         <outlet property="ThirdLabel" destination="v7z-gF-sJc" id="olP-a1-AJe"/>

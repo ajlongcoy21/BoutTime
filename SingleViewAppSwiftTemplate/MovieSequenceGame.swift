@@ -143,6 +143,36 @@ class MovieSequenceGame: Game
         
     }
     
+    func resetMovieSelectedArray()
+    {
+        for index in 1...3
+        {
+            moviesSelectedArray[index] = -1
+        }
+    }
+    
+    func updateRound()
+    {
+        gameRound += 1
+    }
+    
+    func getRound() -> Int
+    {
+        return gameRound
+    }
+    
+    func isGameFinished() -> Bool
+    {
+        if gameRound == 6
+        {
+            return true
+        }
+        else
+        {
+            return false
+        }
+    }
+    
 }
 
 enum MovieError: Error

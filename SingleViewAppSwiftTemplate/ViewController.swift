@@ -23,7 +23,14 @@ class ViewController: UIViewController
     @IBOutlet weak var FourthLabel: UILabel!
     @IBOutlet weak var TimerLabel: UILabel!
     @IBOutlet weak var informationLabel: UILabel!
+    
     @IBOutlet weak var NextRoundButton: UIButton!
+    @IBOutlet weak var MoveButton1: UIButton!
+    @IBOutlet weak var MoveButton2: UIButton!
+    @IBOutlet weak var MoveButton3: UIButton!
+    @IBOutlet weak var MoveButton4: UIButton!
+    @IBOutlet weak var MoveButton5: UIButton!
+    @IBOutlet weak var MoveButton6: UIButton!
     
     required init?(coder aDecoder: NSCoder)
     {
@@ -80,6 +87,21 @@ class ViewController: UIViewController
             movieArray[2] = movieArray[3]
             movieArray[3] = tempMovie
             
+        case 6:
+            
+            NextRoundButton.setImage(nil, for: .normal)
+            enableMoveButtons()
+            informationLabel.text = "Shake to complete"
+            TimerLabel.text = "1:00"
+            seconds = 60
+            movieSequenceGame.resetMovieSelectedArray()
+            movieSequenceGame.updateRound()
+            gameTimer = Timer()
+            movieArray = movieSequenceGame.selectMovies()
+            updateDisplay()
+            startTimer()
+            
+            
         default:
             break
         }
@@ -101,6 +123,7 @@ class ViewController: UIViewController
         ThirdLabel.text = movieArray[2].movieTitle
         FourthLabel.text = movieArray[3].movieTitle
         
+        disableNextRoundButton()
         startTimer()
         
     }
@@ -159,15 +182,97 @@ class ViewController: UIViewController
     
     func answer(fromUser: Bool)
     {
-        informationLabel.text = "Tap events to learn more"
-        
-        switch fromUser
+        if !movieSequenceGame.isGameFinished()
         {
-        case true:
-            NextRoundButton.setImage(#imageLiteral(resourceName: "NextRoundCorrect"), for: .normal)
-        default:
-            NextRoundButton.setImage(#imageLiteral(resourceName: "NextRoundFail"), for: .normal)
+            enableNextRoundButton()
+            disableMoveButtons()
+            
+            informationLabel.text = "Tap movies to learn more"
+        
+            switch fromUser
+            {
+            case true:
+                NextRoundButton.setImage(#imageLiteral(resourceName: "NextRoundCorrect"), for: .normal)
+            default:
+                NextRoundButton.setImage(#imageLiteral(resourceName: "NextRoundFail"), for: .normal)
+            }
         }
+        else
+        {
+            disableNextRoundButton()
+            disableMoveButtons()
+            informationLabel.text = "Game is finished"
+        }
+    }
+    
+    /*------------------------------------------------------------------------------
+     disableNextRoundButton
+     
+     Arguments: None
+     Returns: None
+     
+     diables the next round button so the user is not able to press during a round
+     ------------------------------------------------------------------------------*/
+    
+    func disableNextRoundButton()
+    {
+        NextRoundButton.isUserInteractionEnabled = false
+        
+    }
+    
+    /*------------------------------------------------------------------------------
+     enableNextRoundButton
+     
+     Arguments: None
+     Returns: None
+     
+     enables the next round button so the user can can continue to play
+     ------------------------------------------------------------------------------*/
+    
+    func enableNextRoundButton()
+    {
+        NextRoundButton.isUserInteractionEnabled = true
+        
+    }
+    
+    /*------------------------------------------------------------------------------
+     disableMoveButtons
+     
+     Arguments: None
+     Returns: None
+     
+     diables the move buttons until the next round
+     ------------------------------------------------------------------------------*/
+    
+    func disableMoveButtons()
+    {
+        MoveButton1.isUserInteractionEnabled = false
+        MoveButton2.isUserInteractionEnabled = false
+        MoveButton3.isUserInteractionEnabled = false
+        MoveButton4.isUserInteractionEnabled = false
+        MoveButton5.isUserInteractionEnabled = false
+        MoveButton6.isUserInteractionEnabled = false
+        
+    }
+    
+    /*------------------------------------------------------------------------------
+     enableMoveButtons
+     
+     Arguments: None
+     Returns: None
+     
+     enables the move buttons so the user can continue to play
+     ------------------------------------------------------------------------------*/
+    
+    func enableMoveButtons()
+    {
+        MoveButton1.isUserInteractionEnabled = true
+        MoveButton2.isUserInteractionEnabled = true
+        MoveButton3.isUserInteractionEnabled = true
+        MoveButton4.isUserInteractionEnabled = true
+        MoveButton5.isUserInteractionEnabled = true
+        MoveButton6.isUserInteractionEnabled = true
+        
     }
 
 }
