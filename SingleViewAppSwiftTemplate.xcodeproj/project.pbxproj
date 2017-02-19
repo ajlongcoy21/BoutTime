@@ -14,6 +14,9 @@
 		3A8AADD31DF9B85E00A2B931 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8AADD11DF9B85E00A2B931 /* LaunchScreen.storyboard */; };
 		3A8AADDE1DF9B85E00A2B931 /* SingleViewAppSwiftTemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AADDD1DF9B85E00A2B931 /* SingleViewAppSwiftTemplateTests.swift */; };
 		3A8AADE91DF9B85E00A2B931 /* SingleViewAppSwiftTemplateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AADE81DF9B85E00A2B931 /* SingleViewAppSwiftTemplateUITests.swift */; };
+		3E304CCB1E514BED008E8578 /* MovieDebuts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E304CCA1E514BED008E8578 /* MovieDebuts.plist */; };
+		3E4ADC1F1E58FB1100F86E8D /* MovieSequenceGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4ADC1E1E58FB1100F86E8D /* MovieSequenceGame.swift */; };
+		3E4ADC231E59347300F86E8D /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4ADC221E59347300F86E8D /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		3A8AADE41DF9B85E00A2B931 /* SingleViewAppSwiftTemplateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SingleViewAppSwiftTemplateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8AADE81DF9B85E00A2B931 /* SingleViewAppSwiftTemplateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewAppSwiftTemplateUITests.swift; sourceTree = "<group>"; };
 		3A8AADEA1DF9B85E00A2B931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E304CCA1E514BED008E8578 /* MovieDebuts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = MovieDebuts.plist; path = ../MovieDebuts.plist; sourceTree = "<group>"; };
+		3E4ADC1E1E58FB1100F86E8D /* MovieSequenceGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieSequenceGame.swift; sourceTree = "<group>"; };
+		3E4ADC221E59347300F86E8D /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +103,15 @@
 		3A8AADC71DF9B85E00A2B931 /* SingleViewAppSwiftTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				3E304CCA1E514BED008E8578 /* MovieDebuts.plist */,
 				3A8AADC81DF9B85E00A2B931 /* AppDelegate.swift */,
 				3A8AADCA1DF9B85E00A2B931 /* ViewController.swift */,
 				3A8AADCC1DF9B85E00A2B931 /* Main.storyboard */,
 				3A8AADCF1DF9B85E00A2B931 /* Assets.xcassets */,
 				3A8AADD11DF9B85E00A2B931 /* LaunchScreen.storyboard */,
 				3A8AADD41DF9B85E00A2B931 /* Info.plist */,
+				3E4ADC1E1E58FB1100F86E8D /* MovieSequenceGame.swift */,
+				3E4ADC221E59347300F86E8D /* Game.swift */,
 			);
 			path = SingleViewAppSwiftTemplate;
 			sourceTree = "<group>";
@@ -235,6 +244,7 @@
 			files = (
 				3A8AADD31DF9B85E00A2B931 /* LaunchScreen.storyboard in Resources */,
 				3A8AADD01DF9B85E00A2B931 /* Assets.xcassets in Resources */,
+				3E304CCB1E514BED008E8578 /* MovieDebuts.plist in Resources */,
 				3A8AADCE1DF9B85E00A2B931 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,7 +271,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A8AADCB1DF9B85E00A2B931 /* ViewController.swift in Sources */,
+				3E4ADC1F1E58FB1100F86E8D /* MovieSequenceGame.swift in Sources */,
 				3A8AADC91DF9B85E00A2B931 /* AppDelegate.swift in Sources */,
+				3E4ADC231E59347300F86E8D /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

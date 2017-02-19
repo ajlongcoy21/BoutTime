@@ -24,7 +24,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="     History Event 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ec-QM-g97">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="     History Event 1" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ec-QM-g97">
                                 <rect key="frame" x="16" y="30" width="303" height="116"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -34,7 +34,7 @@
                                 <color key="textColor" red="0.21707296371459961" green="0.42016503214836121" blue="0.51937109231948853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="     History Event 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgI-mB-xbq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="     History Event 2" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgI-mB-xbq">
                                 <rect key="frame" x="16" y="154" width="303" height="116"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -44,7 +44,7 @@
                                 <color key="textColor" red="0.21707296370000001" green="0.4201650321" blue="0.5193710923" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="     History Event 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7z-gF-sJc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="     History Event 3" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7z-gF-sJc">
                                 <rect key="frame" x="16" y="278" width="303" height="116"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -54,7 +54,7 @@
                                 <color key="textColor" red="0.21707296370000001" green="0.4201650321" blue="0.5193710923" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="     History Event 4 " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nte-Ng-n4Q">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="     History Event 4 " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nte-Ng-n4Q">
                                 <rect key="frame" x="16" y="402" width="303" height="116"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -68,6 +68,11 @@
                                 <rect key="frame" x="319" y="30" width="40" height="116"/>
                                 <state key="normal" image="FullButtonDown"/>
                                 <state key="highlighted" image="FullButtonDownSelected"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="moveButtonPressedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Pyu-mu-eDG"/>
                                     <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S2c-Uu-2Y0"/>
@@ -77,6 +82,11 @@
                                 <rect key="frame" x="319" y="402" width="40" height="116"/>
                                 <state key="normal" image="FullButtonUp"/>
                                 <state key="highlighted" image="FullButtonUpSelected"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="moveButtonPressedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="qLi-5o-hN5"/>
                                     <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IJ9-yp-Jvh"/>
@@ -86,6 +96,11 @@
                                 <rect key="frame" x="319" y="154" width="40" height="58"/>
                                 <state key="normal" image="HalfButtonUp"/>
                                 <state key="highlighted" image="HalfButtonUpSelected"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="moveButtonPressedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="67l-x7-19e"/>
                                     <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jha-Mj-phC"/>
@@ -95,6 +110,11 @@
                                 <rect key="frame" x="319" y="278" width="40" height="58"/>
                                 <state key="normal" image="HalfButtonUp"/>
                                 <state key="highlighted" image="HalfButtonUpSelected"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="moveButtonPressedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="UA9-Qw-VFu"/>
                                     <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BWN-Yk-iLD"/>
@@ -104,6 +124,11 @@
                                 <rect key="frame" x="319" y="212" width="40" height="58"/>
                                 <state key="normal" image="HalfButtonDown"/>
                                 <state key="highlighted" image="HalfButtonDownSelected"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="moveButtonPressedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="mxH-Re-ZnE"/>
                                     <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ktt-RV-BiY"/>
@@ -113,6 +138,11 @@
                                 <rect key="frame" x="319" y="336" width="40" height="58"/>
                                 <state key="normal" image="HalfButtonDown"/>
                                 <state key="highlighted" image="HalfButtonDownSelected"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="moveButtonPressedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="LVB-m8-c2g"/>
                                     <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dy9-UA-cEZ"/>
@@ -180,6 +210,12 @@
                             <constraint firstItem="sCn-y5-rOq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="46" id="y2z-Pk-1ZW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="FirstLabel" destination="9ec-QM-g97" id="y5i-r6-xvZ"/>
+                        <outlet property="FourthLabel" destination="nte-Ng-n4Q" id="ffv-6m-4EG"/>
+                        <outlet property="SecondLabel" destination="rgI-mB-xbq" id="IFv-YE-oOZ"/>
+                        <outlet property="ThirdLabel" destination="v7z-gF-sJc" id="olP-a1-AJe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

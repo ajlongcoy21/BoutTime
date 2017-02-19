@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Movie1</key>
+	<dict>
+		<key>debutDate</key>
+		<date>2000-07-14T05:00:00Z</date>
+		<key>movieTitle</key>
+		<string>X-Men</string>
+	</dict>
+	<key>Movie2</key>
+	<dict>
+		<key>debutDate</key>
+		<date>2003-05-02T05:00:00Z</date>
+		<key>movieTitle</key>
+		<string>X2</string>
+	</dict>
+	<key>Movie3</key>
+	<dict>
+		<key>debutDate</key>
+		<date>2006-05-26T05:00:00Z</date>
+		<key>movieTitle</key>
+		<string>X-Men: The Last Stand</string>
+	</dict>
+	<key>Movie4</key>
+	<dict>
+		<key>debutDate</key>
+		<date>2008-05-02T05:00:00Z</date>
+		<key>movieTitle</key>
+		<string>Iron Man</string>
+	</dict>
+	<key>Movie5</key>
+	<dict>
+		<key>debutDate</key>
+		<date>2008-06-13T05:00:00Z</date>
+		<key>movieTitle</key>
+		<string>The Incredible Hulk</string>
+	</dict>
+	<key>Movie6</key>
+	<dict>
+		<key>debutDate</key>
+		<date>2009-05-01T05:00:00Z</date>
+		<key>movieTitle</key>
+		<string>X-Men Origins: Wolverine</string>
+	</dict>
+	<key>Movie7</key>
+	<dict>
+		<key>debutDate</key>
+		<date>2010-05-07T05:00:00Z</date>
+		<key>movieTitle</key>
+		<string>Iron Man 2</string>
+	</dict>
+	<key>Movie8</key>
+	<dict>
+		<key>debutDate</key>
+		<date>2011-05-06T05:00:00Z</date>
+		<key>movieTitle</key>
+		<string>Thor</string>
+	</dict>
+	<key>Movie9</key>
+	<dict>
+		<key>debutDate</key>
+		<date>2011-06-03T05:00:00Z</date>
+		<key>movieTitle</key>
+		<string>X-Men: First Class</string>
+	</dict>
+	<key>Movie10</key>
+	<dict>
+		<key>debutDate</key>
+		<date>2011-07-22T05:00:00Z</date>
+		<key>movieTitle</key>
+		<string>Captain America: The First Avenger</string>
+	</dict>
+	<key>Movie11</key>
+	<dict>
+		<key>debutDate</key>
+		<date>2012-05-04T05:00:00Z</date>
+		<key>movieTitle</key>
+		<string>Marvel&apos;s The Avengers</string>
+	</dict>
+	<key>Movie12</key>
+	<dict>
+		<key>debutDate</key>
+		<date>2013-05-03T05:00:00Z</date>
+		<key>movieTitle</key>
+		<string>Iron Man 3</string>
+	</dict>
+	<key>Movie13</key>
+	<dict>
+		<key>debutDate</key>
+		<date>2013-06-14T05:00:00Z</date>
+		<key>movieTitle</key>
+		<string>Man of Steel</string>
+	</dict>
+	<key>Movie14</key>
+	<dict>
+		<key>debutDate</key>
+		<date>2013-07-26T05:00:00Z</date>
+		<key>movieTitle</key>
+		<string>The Wolverine</string>
+	</dict>
+	<key>Movie15</key>
+	<dict>
+		<key>debutDate</key>
+		<date>2013-11-08T06:00:00Z</date>
+		<key>movieTitle</key>
+		<string>Thor: The Dark World</string>
+	</dict>
+	<key>Movie16</key>
+	<dict>
+		<key>debutDate</key>
+		<date>2014-04-04T05:00:00Z</date>
+		<key>movieTitle</key>
+		<string>Captain America: The Winter Soldier</string>
+	</dict>
+	<key>Movie17</key>
+	<dict>
+		<key>debutDate</key>
+		<date>2014-05-23T05:00:00Z</date>
+		<key>movieTitle</key>
+		<string>X-Men: Days of Future Past</string>
+	</dict>
+	<key>Movie18</key>
+	<dict>
+		<key>debutDate</key>
+		<date>2014-08-01T05:00:00Z</date>
+		<key>movieTitle</key>
+		<string>Guardians of the Galaxy</string>
+	</dict>
+	<key>Movie19</key>
+	<dict>
+		<key>debutDate</key>
+		<date>2015-05-01T05:00:00Z</date>
+		<key>movieTitle</key>
+		<string>Avengers: Age of Ultron</string>
+	</dict>
+	<key>Movie20</key>
+	<dict>
+		<key>debutDate</key>
+		<date>2015-07-17T05:00:00Z</date>
+		<key>movieTitle</key>
+		<string>Ant-Man</string>
+	</dict>
+	<key>Movie21</key>
+	<dict>
+		<key>debutDate</key>
+		<date>2016-02-12T06:00:00Z</date>
+		<key>movieTitle</key>
+		<string>Deadpool</string>
+	</dict>
+	<key>Movie22</key>
+	<dict>
+		<key>debutDate</key>
+		<date>2016-03-25T05:00:00Z</date>
+		<key>movieTitle</key>
+		<string>Batman v Superman: Dawn of Justice</string>
+	</dict>
+	<key>Movie23</key>
+	<dict>
+		<key>debutDate</key>
+		<date>2016-05-06T05:00:00Z</date>
+		<key>movieTitle</key>
+		<string>Captain America: Civil War</string>
+	</dict>
+	<key>Movie24</key>
+	<dict>
+		<key>debutDate</key>
+		<date>2016-05-26T05:00:00Z</date>
+		<key>movieTitle</key>
+		<string>X-Men: Apocalypse</string>
+	</dict>
+	<key>Movie25</key>
+	<dict>
+		<key>debutDate</key>
+		<date>2016-08-05T05:00:00Z</date>
+		<key>movieTitle</key>
+		<string>Suicide Squad</string>
+	</dict>
+	<key>Movie26</key>
+	<dict>
+		<key>debutDate</key>
+		<date>2016-11-04T05:00:00Z</date>
+		<key>movieTitle</key>
+		<string>Doctor Strange</string>
+	</dict>
+</dict>
+</plist>
