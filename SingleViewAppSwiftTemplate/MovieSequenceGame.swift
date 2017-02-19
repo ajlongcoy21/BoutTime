@@ -19,6 +19,7 @@ class MovieSequenceGame: Game
 {
     var gameRound: Int
     var playerScore: Int
+    
     var moviesSelected: Bool
     var moviesSelectedArray: [Int]
     var movieInventory: [String: Movie]
@@ -26,8 +27,10 @@ class MovieSequenceGame: Game
     required init(movieInventory: [String : Movie])
     {
         self.movieInventory = movieInventory
+        
         self.gameRound = 0
         self.playerScore = 0
+        
         self.moviesSelectedArray = Array(repeating: -1, count: 4)
         self.moviesSelected = false
         
@@ -91,7 +94,6 @@ class MovieSequenceGame: Game
             }
         }
         
-            
         movieArray.append(movieInventory["Movie\(moviesSelectedArray[0])"]!)
         movieArray.append(movieInventory["Movie\(moviesSelectedArray[1])"]!)
         movieArray.append(movieInventory["Movie\(moviesSelectedArray[2])"]!)
@@ -126,6 +128,19 @@ class MovieSequenceGame: Game
         {
             moviesSelectedArray[index] = -1
         }
+    }
+    
+    func checkAnswer(submittal: [Movie]) -> Bool
+    {
+        
+        if submittal[0].debutDate < submittal[1].debutDate && submittal[1].debutDate < submittal[2].debutDate && submittal[2].debutDate < submittal[3].debutDate
+        {
+            playerScore += 1
+            return true
+        }
+        
+        return false
+        
     }
     
 }

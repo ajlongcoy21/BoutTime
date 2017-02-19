@@ -14,10 +14,16 @@ class ViewController: UIViewController
     let movieSequenceGame: MovieSequenceGame
     var movieArray: [Movie]
     
+    var gameTimer: Timer
+    var seconds: Int
+    
     @IBOutlet weak var FirstLabel: UILabel!
     @IBOutlet weak var SecondLabel: UILabel!
     @IBOutlet weak var ThirdLabel: UILabel!
     @IBOutlet weak var FourthLabel: UILabel!
+    @IBOutlet weak var TimerLabel: UILabel!
+    @IBOutlet weak var informationLabel: UILabel!
+    @IBOutlet weak var NextRoundButton: UIButton!
     
     required init?(coder aDecoder: NSCoder)
     {
@@ -33,6 +39,8 @@ class ViewController: UIViewController
         }
         
         movieArray = movieSequenceGame.selectMovies()
+        gameTimer = Timer()
+        seconds = 60
         
         super.init(coder: aDecoder)
         
@@ -41,6 +49,7 @@ class ViewController: UIViewController
     @IBAction func moveEvent(_ sender: UIButton)
     {
         var tempText: String = ""
+        var tempMovie: Movie
         
         switch sender.tag
         {
@@ -48,14 +57,29 @@ class ViewController: UIViewController
             tempText = FirstLabel.text!
             FirstLabel.text = SecondLabel.text
             SecondLabel.text = tempText
+            
+            tempMovie = movieArray[0]
+            movieArray[0] = movieArray[1]
+            movieArray[1] = tempMovie
+            
         case 2, 3:
             tempText = SecondLabel.text!
             SecondLabel.text = ThirdLabel.text
             ThirdLabel.text = tempText
+            
+            tempMovie = movieArray[1]
+            movieArray[1] = movieArray[2]
+            movieArray[2] = tempMovie
+            
         case 4, 5:
             tempText = ThirdLabel.text!
             ThirdLabel.text = FourthLabel.text
             FourthLabel.text = tempText
+            
+            tempMovie = movieArray[2]
+            movieArray[2] = movieArray[3]
+            movieArray[3] = tempMovie
+            
         default:
             break
         }
@@ -70,17 +94,49 @@ class ViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        self.becomeFirstResponder()
         // Do any additional setup after loading the view, typically from a nib.
         FirstLabel.text = movieArray[0].movieTitle
         SecondLabel.text = movieArray[1].movieTitle
         ThirdLabel.text = movieArray[2].movieTitle
         FourthLabel.text = movieArray[3].movieTitle
+        
+        startTimer()
+        
     }
 
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
+    }
+    
+    func startTimer()
+    {
+        gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(ViewController.updateTimerLabel)), userInfo: nil, repeats: true)
+        
+    }
+    
+    func updateTimerLabel()
+    {
+        if (seconds > 0)
+        {
+            switch seconds
+            {
+            case 1,2,3,4,5,6,7,8,9,10:
+                seconds -= 1
+                TimerLabel.text = "0:0\(seconds)"
+            default:
+                seconds -= 1
+                TimerLabel.text = "0:\(seconds)"
+            }
+        }
+        else
+        {
+            gameTimer.invalidate()
+            answer(fromUser: movieSequenceGame.checkAnswer(submittal: movieArray))
+        }
         
     }
     
@@ -91,7 +147,28 @@ class ViewController: UIViewController
         ThirdLabel.text = movieArray[2].movieTitle
         FourthLabel.text = movieArray[3].movieTitle
     }
-
+    
+    override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?)
+    {
+        if motion == .motionShake
+        {
+            gameTimer.invalidate()
+            answer(fromUser: movieSequenceGame.checkAnswer(submittal: movieArray))
+        }
+    }
+    
+    func answer(fromUser: Bool)
+    {
+        informationLabel.text = "Tap events to learn more"
+        
+        switch fromUser
+        {
+        case true:
+            NextRoundButton.setImage(#imageLiteral(resourceName: "NextRoundCorrect"), for: .normal)
+        default:
+            NextRoundButton.setImage(#imageLiteral(resourceName: "NextRoundFail"), for: .normal)
+        }
+    }
 
 }
 

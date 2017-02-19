@@ -78,20 +78,6 @@
                                     <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S2c-Uu-2Y0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0j-vE-wdN">
-                                <rect key="frame" x="319" y="402" width="40" height="116"/>
-                                <state key="normal" image="FullButtonUp"/>
-                                <state key="highlighted" image="FullButtonUpSelected"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="moveButtonPressedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="qLi-5o-hN5"/>
-                                    <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IJ9-yp-Jvh"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G67-9q-da5">
                                 <rect key="frame" x="319" y="154" width="40" height="58"/>
                                 <state key="normal" image="HalfButtonUp"/>
@@ -104,20 +90,6 @@
                                 <connections>
                                     <action selector="moveButtonPressedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="67l-x7-19e"/>
                                     <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jha-Mj-phC"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGH-9y-VKS">
-                                <rect key="frame" x="319" y="278" width="40" height="58"/>
-                                <state key="normal" image="HalfButtonUp"/>
-                                <state key="highlighted" image="HalfButtonUpSelected"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
-                                        <integer key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="moveButtonPressedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="UA9-Qw-VFu"/>
-                                    <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BWN-Yk-iLD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwG-9I-Dvu">
@@ -134,6 +106,20 @@
                                     <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ktt-RV-BiY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGH-9y-VKS">
+                                <rect key="frame" x="319" y="278" width="40" height="58"/>
+                                <state key="normal" image="HalfButtonUp"/>
+                                <state key="highlighted" image="HalfButtonUpSelected"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="moveButtonPressedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="UA9-Qw-VFu"/>
+                                    <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BWN-Yk-iLD"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeZ-7j-swY">
                                 <rect key="frame" x="319" y="336" width="40" height="58"/>
                                 <state key="normal" image="HalfButtonDown"/>
@@ -148,12 +134,26 @@
                                     <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dy9-UA-cEZ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="9d5-Ef-jAJ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0j-vE-wdN">
+                                <rect key="frame" x="319" y="402" width="40" height="116"/>
+                                <state key="normal" image="FullButtonUp"/>
+                                <state key="highlighted" image="FullButtonUpSelected"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="moveButtonPressedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="qLi-5o-hN5"/>
+                                    <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IJ9-yp-Jvh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9d5-Ef-jAJ">
                                 <rect key="frame" x="124" y="527.5" width="127" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="9d5-Ef-jAJ" secondAttribute="height" multiplier="127:60" id="3JZ-wy-XIG"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -163,6 +163,9 @@
                                 <color key="textColor" red="0.13181218504905701" green="0.43612533807754517" blue="0.57611638307571411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2M-ap-iqD">
+                                <rect key="frame" x="78" y="527" width="219" height="68"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.028375577181577682" green="0.1618008017539978" blue="0.29589968919754028" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -173,10 +176,12 @@
                             <constraint firstItem="c0j-vE-wdN" firstAttribute="height" secondItem="nte-Ng-n4Q" secondAttribute="height" id="2rV-Ue-Gu4"/>
                             <constraint firstAttribute="leadingMargin" secondItem="nte-Ng-n4Q" secondAttribute="leading" id="3Gx-r3-4eS"/>
                             <constraint firstItem="SeZ-7j-swY" firstAttribute="top" secondItem="GGH-9y-VKS" secondAttribute="bottom" id="3Qs-Jd-V01"/>
+                            <constraint firstItem="V2M-ap-iqD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="62" id="46n-Vk-0XM"/>
                             <constraint firstItem="sCn-y5-rOq" firstAttribute="top" secondItem="9d5-Ef-jAJ" secondAttribute="bottom" constant="7.5" id="50i-dj-aMw"/>
                             <constraint firstItem="rgI-mB-xbq" firstAttribute="top" secondItem="9ec-QM-g97" secondAttribute="bottom" constant="8" id="5fZ-Cv-Mec"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sCn-y5-rOq" secondAttribute="trailing" constant="46" id="6ka-rC-OFb"/>
                             <constraint firstItem="q4q-hp-91s" firstAttribute="height" secondItem="9ec-QM-g97" secondAttribute="height" id="CbD-9g-wtB"/>
+                            <constraint firstItem="V2M-ap-iqD" firstAttribute="top" secondItem="nte-Ng-n4Q" secondAttribute="bottom" constant="9" id="Efr-fh-22s"/>
                             <constraint firstItem="SeZ-7j-swY" firstAttribute="leading" secondItem="v7z-gF-sJc" secondAttribute="trailing" id="GW7-c0-sOW"/>
                             <constraint firstItem="RwG-9I-Dvu" firstAttribute="top" secondItem="G67-9q-da5" secondAttribute="bottom" id="GYD-g3-Icl"/>
                             <constraint firstItem="9ec-QM-g97" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="HOE-GW-eic"/>
@@ -185,6 +190,8 @@
                             <constraint firstItem="GGH-9y-VKS" firstAttribute="leading" secondItem="v7z-gF-sJc" secondAttribute="trailing" id="MxJ-Ek-Aug"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9d5-Ef-jAJ" secondAttribute="trailing" constant="108" id="N6H-5J-K3z"/>
                             <constraint firstAttribute="trailingMargin" secondItem="q4q-hp-91s" secondAttribute="trailing" id="Rfh-B4-YpO"/>
+                            <constraint firstItem="sCn-y5-rOq" firstAttribute="top" secondItem="V2M-ap-iqD" secondAttribute="bottom" id="U9Q-z5-gLh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="V2M-ap-iqD" secondAttribute="trailing" constant="62" id="W18-Ix-ZDb"/>
                             <constraint firstItem="G67-9q-da5" firstAttribute="leading" secondItem="rgI-mB-xbq" secondAttribute="trailing" id="W4F-E8-bAK"/>
                             <constraint firstItem="G67-9q-da5" firstAttribute="top" secondItem="q4q-hp-91s" secondAttribute="bottom" constant="8" id="Xsa-ss-te1"/>
                             <constraint firstItem="c0j-vE-wdN" firstAttribute="top" secondItem="SeZ-7j-swY" secondAttribute="bottom" constant="8" id="YcV-L5-8bk"/>
@@ -213,8 +220,11 @@
                     <connections>
                         <outlet property="FirstLabel" destination="9ec-QM-g97" id="y5i-r6-xvZ"/>
                         <outlet property="FourthLabel" destination="nte-Ng-n4Q" id="ffv-6m-4EG"/>
+                        <outlet property="NextRoundButton" destination="V2M-ap-iqD" id="Gvp-KU-glz"/>
                         <outlet property="SecondLabel" destination="rgI-mB-xbq" id="IFv-YE-oOZ"/>
                         <outlet property="ThirdLabel" destination="v7z-gF-sJc" id="olP-a1-AJe"/>
+                        <outlet property="TimerLabel" destination="9d5-Ef-jAJ" id="PSB-Ew-869"/>
+                        <outlet property="informationLabel" destination="sCn-y5-rOq" id="449-8Q-Lj7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
