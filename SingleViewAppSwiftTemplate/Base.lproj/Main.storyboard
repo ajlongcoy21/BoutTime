@@ -74,7 +74,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="moveButtonPressedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Pyu-mu-eDG"/>
                                     <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S2c-Uu-2Y0"/>
                                 </connections>
                             </button>
@@ -88,7 +87,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="moveButtonPressedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="67l-x7-19e"/>
                                     <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jha-Mj-phC"/>
                                 </connections>
                             </button>
@@ -102,7 +100,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="moveButtonPressedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="mxH-Re-ZnE"/>
                                     <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ktt-RV-BiY"/>
                                 </connections>
                             </button>
@@ -116,7 +113,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="moveButtonPressedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="UA9-Qw-VFu"/>
                                     <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BWN-Yk-iLD"/>
                                 </connections>
                             </button>
@@ -130,7 +126,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="moveButtonPressedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="LVB-m8-c2g"/>
                                     <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dy9-UA-cEZ"/>
                                 </connections>
                             </button>
@@ -144,7 +139,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="moveButtonPressedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="qLi-5o-hN5"/>
                                     <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IJ9-yp-Jvh"/>
                                 </connections>
                             </button>

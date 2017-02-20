@@ -9,14 +9,31 @@
 //import Foundation
 import GameKit
 
+/*------------------------------------------------------------------------------
+ Movie Struct
+ 
+ Struct used to store the information for the movie. Debut Date and Movie Title
+ ------------------------------------------------------------------------------*/
+
 struct Movie
 {
     let debutDate: Date
     let movieTitle: String
 }
 
+/*------------------------------------------------------------------------------
+ MovieSequenceGame
+ 
+ Game class created to control the game
+ ------------------------------------------------------------------------------*/
+
 class MovieSequenceGame: Game
 {
+    
+    /*--------------------------------------------------------------------------
+     Define local variables that are used to control the gameplay
+     --------------------------------------------------------------------------*/
+    
     var gameRound: Int
     var playerScore: Int
     
@@ -24,6 +41,15 @@ class MovieSequenceGame: Game
     var moviesSelectedArray: [Int]
     var movieInventory: [String: Movie]
 
+    /*------------------------------------------------------------------------------
+     init
+     
+     Arguments: Dictionary of Strings with value of Movie
+     Returns: None
+     
+     This function initializes the game class
+     ------------------------------------------------------------------------------*/
+    
     required init(movieInventory: [String : Movie])
     {
         self.movieInventory = movieInventory
@@ -36,17 +62,24 @@ class MovieSequenceGame: Game
         
     }
     
-    func displayMovieInventory()
-    {
-        print(movieInventory)
-    }
+    /*------------------------------------------------------------------------------
+     selectMovies
+     
+     Arguments: None
+     Returns: Movie array
+     
+     This function selects the movies to be displayed for the next round. It ensures
+     that there are no duplicates that will be shown to the user.
+     ------------------------------------------------------------------------------*/
     
     func selectMovies() -> [Movie]
     {
         
-        let maxNumber = UInt32(movieInventory.count - 1)
+        let maxNumber = UInt32(movieInventory.count - 1)             // Used to determine how many options there are
         var randomNumber: Int = 0
         var movieArray: [Movie] = []
+        
+        // While we do not have valid movie selections to display to the user, continue to randomly select options
         
         while !validMovieSelections()
         {
@@ -94,6 +127,8 @@ class MovieSequenceGame: Game
             }
         }
         
+        // Used to track which options were chosen to be displayed to the user
+        
         movieArray.append(movieInventory["Movie\(moviesSelectedArray[0])"]!)
         movieArray.append(movieInventory["Movie\(moviesSelectedArray[1])"]!)
         movieArray.append(movieInventory["Movie\(moviesSelectedArray[2])"]!)
@@ -102,8 +137,21 @@ class MovieSequenceGame: Game
         return movieArray
     }
     
+    /*------------------------------------------------------------------------------
+     validMovieSelections
+     
+     Arguments: None
+     Returns: Bool
+     
+     This function looks to see if the the movie selection is okay to be displayed
+     to the user without duplicates.
+     ------------------------------------------------------------------------------*/
+    
     func validMovieSelections() -> Bool
     {
+        
+        // check to see if the array is set to the starting default value of -1
+        
         for movieOption in moviesSelectedArray
         {
             if movieOption == -1
@@ -111,6 +159,8 @@ class MovieSequenceGame: Game
                 return false
             }
         }
+        
+        // If not check to see of all of the movies are different
         
         if moviesSelectedArray[0] != moviesSelectedArray[1] && moviesSelectedArray[0] != moviesSelectedArray[2] && moviesSelectedArray[0] != moviesSelectedArray[3]
         {
@@ -121,6 +171,16 @@ class MovieSequenceGame: Game
             return false
         }
     }
+    
+    /*------------------------------------------------------------------------------
+     checkAnswer
+     
+     Arguments: Movie Array
+     Returns: Bool
+     
+     This function checks to see if the user put the movies in the correct debut 
+     order (top to bottom : earliest to latest)
+     ------------------------------------------------------------------------------*/
     
     func checkAnswer(submittal: [Movie]) -> Bool
     {
@@ -135,6 +195,15 @@ class MovieSequenceGame: Game
         
     }
     
+    /*------------------------------------------------------------------------------
+     resetMovieSelectedArray
+     
+     Arguments: None
+     Returns: None
+     
+     This function resets the movie array to prepare for the new round
+     ------------------------------------------------------------------------------*/
+    
     func resetMovieSelectedArray()
     {
         for index in 1...3
@@ -143,20 +212,57 @@ class MovieSequenceGame: Game
         }
     }
     
+    /*------------------------------------------------------------------------------
+     updateRound
+     
+     Arguments: None
+     Returns: None
+     
+     This function keeps track of how many rounds have been played
+     ------------------------------------------------------------------------------*/
+    
     func updateRound()
     {
         gameRound += 1
     }
+    
+    /*------------------------------------------------------------------------------
+     getRound
+     
+     Arguments: None
+     Returns: Int
+     
+     This function just returns how many rounds have been played
+     ------------------------------------------------------------------------------*/
     
     func getRound() -> Int
     {
         return gameRound
     }
     
+    /*------------------------------------------------------------------------------
+     getScore
+     
+     Arguments: None
+     Returns: Int
+     
+     This function just returns the players score
+     ------------------------------------------------------------------------------*/
+    
     func getScore() -> Int
     {
         return playerScore
     }
+    
+    /*------------------------------------------------------------------------------
+     isGameFinished
+     
+     Arguments: None
+     Returns: Bool
+     
+     This function checks to see how many rounds have been played. If 6 have been
+     played then the game will end.
+     ------------------------------------------------------------------------------*/
     
     func isGameFinished() -> Bool
     {
@@ -170,6 +276,15 @@ class MovieSequenceGame: Game
         }
     }
     
+    /*------------------------------------------------------------------------------
+     resetGame
+     
+     Arguments: None
+     Returns: None
+     
+     resets the game to start play over
+     ------------------------------------------------------------------------------*/
+    
     func resetGame()
     {
         self.gameRound = 0
@@ -180,6 +295,10 @@ class MovieSequenceGame: Game
     }
     
 }
+
+/*------------------------------------------------------------------------------
+Code to extract the information from the PList File
+ ------------------------------------------------------------------------------*/
 
 enum MovieError: Error
 {
